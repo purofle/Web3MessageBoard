@@ -24,8 +24,8 @@ export function MainPage() {
         const messages = messagesDataToMessages(data);
         console.log(messages)
         content = messages.map(msg =>
-            <div className="bg-amber-300 p-6 rounded-lg shadow-md flex flex-col relative" key={msg.address}>
-                <div className="bg-amber-200 px-4 py-2 rounded-t-lg">
+            <div className="bg-pink-300 p-6 rounded-lg shadow-md flex flex-col relative" key={msg.address}>
+                <div className="bg-white px-4 py-2 rounded-t-lg">
                     <span className="text-sm font-semibold">{msg.address}</span>
                 </div>
                 <div className="mt-4 flex-grow">

@@ -26,7 +26,7 @@ createWeb3Modal({
     projectId,
     chains,
     themeVariables: {
-        '--w3m-accent': '#FCD34DFF',
+        '--w3m-accent': '#F9A8D4FF',
     }
 })
 
