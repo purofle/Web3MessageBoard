@@ -1,5 +1,4 @@
-import { defineConfig } from '@wagmi/cli'
-import {erc20ABI} from "wagmi";
+import {defineConfig} from '@wagmi/cli'
 
 export default defineConfig({
   out: 'src/generated.ts',

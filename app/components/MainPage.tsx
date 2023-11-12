@@ -23,8 +23,19 @@ export function MainPage() {
     if (!messageLoading) {
         const messages = messagesDataToMessages(data);
         console.log(messages)
-        content = messages.map(msg=>
-            <div>{msg.address}: {msg.text}<br/>{msg.likes} likes</div>
+        content = messages.map(msg =>
+            <div className="bg-amber-300 p-6 rounded-lg shadow-md flex flex-col relative" key={msg.address}>
+                <div className="bg-amber-200 px-4 py-2 rounded-t-lg">
+                    <span className="text-sm font-semibold">{msg.address}</span>
+                </div>
+                <div className="mt-4 flex-grow">
+                    <p className="text-lg font-medium">{msg.text}</p>
+                </div>
+                <div className="flex items-end justify-end absolute bottom-2 right-2">
+                    <button className="pr-2">❤️</button>
+                    <span className="text-gray-600">{msg.likes} likes</span>
+                </div>
+            </div>
         )
     } else {
         content = <span>Loading...</span>
