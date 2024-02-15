@@ -24,8 +24,8 @@ export function MainPage() {
         const messages = messagesDataToMessages(data);
         console.log(messages)
         content = messages.map(msg =>
-            <div className="bg-pink-300 p-6 rounded-lg shadow-md flex flex-col relative" key={msg.address}>
-                <div className="bg-white px-4 py-2 rounded-t-lg">
+            <div className="bg-amber-300 p-6 rounded-lg shadow-md w-4/12 flex flex-col relative" key={msg.address}>
+                <div className="bg-white px-4 py-2 rounded-lg">
                     <span className="text-sm font-semibold">{msg.address}</span>
                 </div>
                 <div className="mt-4 flex-grow">
@@ -44,6 +44,7 @@ export function MainPage() {
     return (
         <div className="flex flex-col items-center justify-center flex-grow">
             {content}
+            <button className="bg-pink-300 hover:bg-pink-400 p-4 rounded-full shadow-md w-4/12 my-5 transition duration-300 ease-in-out">Add your message</button>
         </div>
     )
 }
